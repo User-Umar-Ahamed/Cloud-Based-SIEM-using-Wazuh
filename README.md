@@ -133,7 +133,7 @@ Helps prioritize remediation based on endpoint risk and exposure.
 ---
 
 ### 🌐 10. Endpoint Device Summary in Wazuh
-![Endpoint Devices](Images/10_agent_list_overview.png)
+![Endpoint Devices](Images/10_agent_list_overview.png.png)
 Displays the list of all connected agents — Windows, Ubuntu, and Kali Linux.  
 Shows each agent’s version, connection status, and last communication time.  
 Confirms that the Wazuh Manager is actively monitoring all endpoints.
