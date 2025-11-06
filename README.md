@@ -28,7 +28,7 @@ The architecture for this project consists of one **Wazuh server** hosted on the
 ```
 Windows (Agent)  ── \
                      \
-Ubuntu (Agent)    ──   ----------->  DigitalOcean Droplet (Wazuh Manager + Indexer + Dashboard)
+Ubuntu (Agent)    ── ── ----------->  DigitalOcean Droplet (Wazuh Manager + Indexer + Dashboard)
                      /
 KaliLinuX(Agent) ── /
 ```
