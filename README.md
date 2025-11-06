@@ -62,7 +62,7 @@ Screenshots from the project illustrate the deployment process and monitoring in
 
 ### Cloud Droplet Specifications
 
-![Droplet Specs](docs/screenshots/01_droplet_specifications.png)
+![Droplet Specs](docs/screenshots/01_Server_specifications.png)
 *DigitalOcean droplet configured for Wazuh server deployment.*
 
 ### Wazuh Dashboard Login
