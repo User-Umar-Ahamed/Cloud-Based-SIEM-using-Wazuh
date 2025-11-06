@@ -60,31 +60,89 @@ This design provides a realistic environment for observing security telemetry fr
 
 Screenshots from the project illustrate the deployment process and monitoring insights.
 
-### Cloud Droplet Specifications
+### 🖥️ 1. DigitalOcean Droplet Specifications
+![Droplet Specs](Images/01_Server_specifications.png)
+This shows the DigitalOcean cloud droplet used to host the Wazuh Manager.  
+Ubuntu 22.04 LTS was selected with 4 GB RAM and 2 vCPUs for optimal SIEM performance.  
+It serves as the centralized point for collecting and analyzing logs from all agents.
 
-![Droplet Specs](docs/screenshots/01_Server_specifications.png)
-*DigitalOcean droplet configured for Wazuh server deployment.*
+---
 
-### Wazuh Dashboard Login
+### 🔐 2. SSH Connection to Wazuh Server
+![SSH Connection](Images/02_ssh_connection_to_Server.png)
+Secure SSH connection established from the Windows host terminal to the cloud server.  
+This enables remote configuration and management of the Wazuh instance.  
+Proper SSH authentication ensures encrypted communication with the droplet.
 
-![Dashboard Login](docs/screenshots/04_wazuh_dashboard_login.png)
-*Successful access to the cloud-hosted Wazuh Dashboard.*
+---
 
-### Endpoint Agents
+### ⚙️ 3. Wazuh Installation on Server
+![Wazuh Installation](Images/03_wazuh_installation_logs.png)
+Wazuh installation completed successfully on the Ubuntu droplet.  
+The script deployed the Manager, Indexer, and Dashboard components.  
+This step forms the backbone of the SIEM architecture for event collection and analysis.
 
-![Agent List](docs/screenshots/10_agent_list_overview.png)
-*Connected endpoint agents — Windows, Ubuntu, and Kali — displayed in the Wazuh Dashboard.*
+---
 
-### Vulnerability Detection Overview
+### 🧭 4. Wazuh Dashboard Login
+![Wazuh Dashboard](Images/04_wazuh_dashboard_login.png)
+The web-based Wazuh Dashboard confirms a successful deployment.  
+Accessed securely via HTTPS on port 443, it provides visualization of all security data.  
+This is where real-time alerts, vulnerabilities, and agent statuses are monitored.
 
-![Vulnerability Detection](docs/screenshots/08_vulnerability_detection_overview.png)
-*Centralized vulnerability analysis across all endpoint systems.*
+---
+
+### 🪟 5. Windows Agent Overview
+![Windows Agent](Images/05_windows_agent_overview.png)
+The Windows agent was added and authenticated to the Wazuh Manager.  
+It collects Windows event logs, vulnerability data, and Sysmon telemetry.  
+This provides deep insight into endpoint security and system activity.
+
+---
+
+### 🐉 6. Kali Linux Agent Overview
+![Kali Agent](Images/06_kali_agent_overview.png)
+The Kali Linux agent demonstrates monitoring of a penetration testing environment.  
+It helps simulate attack scenarios and validate detection capabilities in Wazuh.  
+This showcases how the SIEM detects reconnaissance and scanning behaviors.
+
+---
+
+### 🐧 7. Ubuntu Agent Overview
+![Ubuntu Agent](Images/07_ubuntu_agent_overview.png)
+The Ubuntu agent connects successfully to the Wazuh Manager.  
+It monitors system logs, file integrity, and software vulnerabilities.  
+This confirms cross-platform visibility and log correlation in the SIEM.
+
+---
+
+### 🧩 8. Vulnerability Detection (All Endpoints)
+![Vulnerability Detection Overview](Images/08_vulnerability_detection_overview.png)
+Wazuh’s built-in vulnerability detection module identifies known CVEs.  
+It analyzes package and OS-level vulnerabilities across all agents.  
+This centralized view supports proactive system hardening and patching.
+
+---
+
+### 🪟 9. Vulnerability Detection (Windows Only)
+![Windows Vulnerability Detection](Images/09_vulnerability_detection_windows.png)
+This filtered dashboard focuses on Windows endpoint vulnerabilities.  
+It highlights the critical, high, and medium-severity issues specific to Windows hosts.  
+Helps prioritize remediation based on endpoint risk and exposure.
+
+---
+
+### 🌐 10. Endpoint Device Summary in Wazuh
+![Endpoint Devices](Images/10_agent_list_overview.png)
+Displays the list of all connected agents — Windows, Ubuntu, and Kali Linux.  
+Shows each agent’s version, connection status, and last communication time.  
+Confirms that the Wazuh Manager is actively monitoring all endpoints.
 
 ---
 
 ## 🎯 Project Outcome
 
-By completing this project, I achieved a comprehensive understanding of how a cloud-based SIEM functions in a hybrid environment. The system successfully collected and correlated data from multiple platforms, providing visibility into endpoint activity, system vulnerabilities, and potential security threats.
+By completing this project, A comprehensive understanding of how a cloud-based SIEM functions in a hybrid environment can be Gained. The system successfully collected and correlated data from multiple platforms, providing visibility into endpoint activity, system vulnerabilities, and potential security threats.
 
 ---
 
