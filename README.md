@@ -63,7 +63,7 @@ Screenshots from the project illustrate the deployment process and monitoring in
 ### 🖥️ 1. DigitalOcean Droplet Specifications
 ![Droplet Specs](Images/01_Server_specifications.png)
 This shows the DigitalOcean cloud droplet used to host the Wazuh Manager.  
-Ubuntu 22.04 LTS was selected with 4 GB RAM and 2 vCPUs for optimal SIEM performance.  
+Ubuntu 22.04 LTS was selected with 8 GB RAM and 4 vCPUs for optimal SIEM performance.  
 It serves as the centralized point for collecting and analyzing logs from all agents.
 
 ---
